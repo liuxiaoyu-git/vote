@@ -28,9 +28,12 @@
 </head>
 <body>
     <table width="100%" height="100%">
-            <tr>
-                <td align="center">
-    <!-- 这里是HTML结构部分 --> 
+        <tr>
+            <td align="center"><div id="result"></div></td>
+	    </tr>
+        <tr>
+            <td align="center">
+	<!-- 这里是HTML结构部分 --> 
     <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
     <!-- 这里是js部分 -->
     <script>
@@ -59,13 +62,13 @@
                     setTimeout(function () {
                         offOn = !offOn;
                         num = rdm % 360;
-                        if (num <= cat * 1) { alert("4999元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "4999元"); }
-                        else if (num <= cat * 2) { alert("50元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "50元"); }
-                        else if (num <= cat * 3) { alert("10元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "10元"); }
-                        else if (num <= cat * 4) { alert("5元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "5元"); }
-                        else if (num <= cat * 5) { alert("免息服务"); console.log("rdm=" + rdm + "，num=" + num + "，" + "免息服务"); }
-                        else if (num <= cat * 6) { alert("提交白金"); console.log("rdm=" + rdm + "，num=" + num + "，" + "提交白金"); }
-                        else if (num <= cat * 7) { alert("未中奖"); console.log("rdm=" + rdm + "，num=" + num + "，" + "未中奖"); }
+                        if (num <= cat * 1) { alert("4999元"); document.getElementById("winner").value="未中奖"; }
+                        else if (num <= cat * 2) { alert("50元"); document.getElementById("winner").value="未中奖"; }
+                        else if (num <= cat * 3) { alert("10元"); document.getElementById("winner").value="未中奖"; }
+                        else if (num <= cat * 4) { alert("5元"); document.getElementById("winner").value="未中奖"; }
+                        else if (num <= cat * 5) { alert("免息服务"); document.getElementById("winner").value="未中奖"; }
+                        else if (num <= cat * 6) { alert("提交白金"); document.getElementById("winner").value="未中奖"; }
+                        else if (num <= cat * 7) { alert("未中奖"); document.getElementById("winner").value="未中奖"; }
                     }, 4000);
                 }
             }, 30);
