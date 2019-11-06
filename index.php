@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="author" content="熊仔其人">
-    <title>转盘抽奖效果</title>
+
+    <title>转盘抽奖</title>
     <!-- 这里是css部分 -->
     <style>
         #bg {
@@ -30,6 +27,9 @@
     </style>
 </head>
 <body>
+    <table width="100%" height="100%">
+            <tr>
+                <td align="center">
     <!-- 这里是HTML结构部分 --> 
     <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
     <!-- 这里是js部分 -->
@@ -71,5 +71,8 @@
             }, 30);
         }
     </script>
+			</td>
+	    </tr>
+    </table>
 </body>
 </html>
