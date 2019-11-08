@@ -10,8 +10,7 @@ $prizetype = trim($_POST['prizetype']);
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $sql = "insert into PrizeWheel values('".$username."-".$code."','".$prizetype."')";
 
-$connection->query($sql)
-echo "您使用了以下信息参加本轮游戏：";
+$connection->query($sql);
 	echo "<br/>用户名：".$username;
 	echo "<br/>手机后4位：".$code;
 	echo "<br/>抽奖结果：".$prizetype;
