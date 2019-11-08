@@ -1,9 +1,9 @@
 <?php
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("DATABASE_USER"); #openshift
-$dbname = getenv("DATABASE_NAME"); #sampledb
-$dbpwd = getenv("DATABASE_PASSWORD"); #password
+$dbuser = getenv("MYSQL_USER"); #openshift
+$dbname = getenv("MYSQL_DATABASE"); #sampledb
+$dbpwd = getenv("MYSQL_PASSWORD"); #password
 $username = trim($_POST['username']);
 $code = trim($_POST['code']);
 $prizetype = trim($_POST['prizetype']);
