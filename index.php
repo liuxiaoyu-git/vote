@@ -37,9 +37,6 @@
             <td align="center">手机4位：<input name="code" type="text"/></td>
 	    </tr>       
 		<tr>
-            <td align="center"><input type="submit" value="提交"/></td>
-	    </tr> 
-		<tr>
 			<td align="center">
 	<!-- 这里是HTML结构部分 --> 
     <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
@@ -84,6 +81,9 @@
     </script>
 			</td>
 	    </tr>
+	    <tr>
+            <td align="center"><input type="submit" value="保存"/></td>
+	    </tr> 
     </table>
 </form>
 </body>
