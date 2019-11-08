@@ -32,7 +32,7 @@
 		<tr>
             <td align="center">请先填写完抽奖信息后再抽奖！</td>
 	    </tr>		<tr>
-            <td align="center">姓名：<input name="name" type="text"><input type="text" id="prize" name="prize" value="-----" /></td>
+            <td align="center">姓名：<input name="name" type="text"><input type="hidden" id="prize" name="prize" value="-----" /></td>
 	    </tr>
 		<tr>
             <td align="center">手机4位：<input name="code" type="text"/></td>
