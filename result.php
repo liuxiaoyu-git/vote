@@ -10,13 +10,11 @@ $prizetype = trim($_POST['prizetype']);
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $sql = "insert into PrizeWheel values('".$username."-".$code."','".$prizetype."')";
 
-if ($connection->query($sql) !== TRUE) {  
-	echo "发生数据库操作错误或用户".$username."已经存在";
-} else {
-	echo "您使用了以下信息参加本轮游戏：";
+$connection->query($sql)
+echo "您使用了以下信息参加本轮游戏：";
 	echo "<br/>用户名：".$username;
 	echo "<br/>手机后4位：".$code;
 	echo "<br/>抽奖结果：".$prizetype;
-}
+
 mysqli_close($connection);
 ?>
