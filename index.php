@@ -29,9 +29,9 @@
 <body>
     <table width="100%" height="100%">
         <tr>
-            <td align="center"><div id="result"></div></td>
+		<tr>
+            <td align="center"><div id="result">---</div></td>
 	    </tr>
-        <tr>
             <td align="center">
 	<!-- 这里是HTML结构部分 --> 
     <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
@@ -62,13 +62,13 @@
                     setTimeout(function () {
                         offOn = !offOn;
                         num = rdm % 360;
-                        if (num <= cat * 1) { alert("4999元"); document.getElementById("winner").value="未中奖"; }
-                        else if (num <= cat * 2) { alert("50元"); document.getElementById("winner").value="未中奖"; }
-                        else if (num <= cat * 3) { alert("10元"); document.getElementById("winner").value="未中奖"; }
-                        else if (num <= cat * 4) { alert("5元"); document.getElementById("winner").value="未中奖"; }
-                        else if (num <= cat * 5) { alert("免息服务"); document.getElementById("winner").value="未中奖"; }
-                        else if (num <= cat * 6) { alert("提交白金"); document.getElementById("winner").value="未中奖"; }
-                        else if (num <= cat * 7) { alert("未中奖"); document.getElementById("winner").value="未中奖"; }
+                        if (num <= cat * 1) { document.getElementById("result").innerHTML="面单999元"; }
+                        else if (num <= cat * 2) { document.getElementById("result").innerHTML="免单50元"; }
+                        else if (num <= cat * 3) { document.getElementById("result").innerHTML="免单10元"; }
+                        else if (num <= cat * 4) { document.getElementById("result").innerHTML="免分期"; }
+                        else if (num <= cat * 5) { document.getElementById("result").innerHTML="免分期"; }
+                        else if (num <= cat * 6) { document.getElementById("result").innerHTML="白条额度"; }
+                        else if (num <= cat * 7) { document.getElementById("result").innerHTML="未中奖"; }
                     }, 4000);
                 }
             }, 30);
