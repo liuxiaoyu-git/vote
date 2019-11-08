@@ -12,9 +12,9 @@ mysql -h127.0.0.1 -P3306 -uopenshift -ppassword
 
 use sampledb;
 
-drop table winner;
+drop table PrizeWheel;
 
-create table winner (username varchar(20) primary key,prizetype varchar(20));
+create table PrizeWheel (user varchar(20) primary key,prizetype varchar(20));
 
 4)创建应用和相关route 
 
