@@ -27,12 +27,21 @@
     </style>
 </head>
 <body>
+<form id="luckydraw" type="post" action="reslut.php">
     <table width="100%" height="100%">
-        <tr>
 		<tr>
-            <td align="center"><div id="result">---</div></td>
+            <td align="center">请先填写完抽奖信息后再抽奖！</td>
+	    </tr>		<tr>
+            <td align="center">姓名：<input name="name" type="text"><input type="text" id="prize" name="prize" value="-----" /></td>
 	    </tr>
-            <td align="center">
+		<tr>
+            <td align="center">手机4位：<input name="code" type="text"/></td>
+	    </tr>       
+		<tr>
+            <td align="center"><input type="submit" value="提交"/></td>
+	    </tr> 
+		<tr>
+			<td align="center">
 	<!-- 这里是HTML结构部分 --> 
     <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
     <!-- 这里是js部分 -->
@@ -62,13 +71,13 @@
                     setTimeout(function () {
                         offOn = !offOn;
                         num = rdm % 360;
-                        if (num <= cat * 1) { document.getElementById("result").innerHTML="面单999元"; }
-                        else if (num <= cat * 2) { document.getElementById("result").innerHTML="免单50元"; }
-                        else if (num <= cat * 3) { document.getElementById("result").innerHTML="免单10元"; }
-                        else if (num <= cat * 4) { document.getElementById("result").innerHTML="免分期"; }
-                        else if (num <= cat * 5) { document.getElementById("result").innerHTML="免分期"; }
-                        else if (num <= cat * 6) { document.getElementById("result").innerHTML="白条额度"; }
-                        else if (num <= cat * 7) { document.getElementById("result").innerHTML="未中奖"; }
+                        if (num <= cat * 1) { document.getElementById("prize").value="面单999元"; document.getElementById("luckydraw").submit();}
+                        else if (num <= cat * 2) { document.getElementById("prize").value="免单50元"; document.getElementById("luckydraw").submit();}
+                        else if (num <= cat * 3) { document.getElementById("prize").value="免单10元"; document.getElementById("luckydraw").submit();}
+                        else if (num <= cat * 4) { document.getElementById("prize").value="免单5元"; document.getElementById("luckydraw").submit();}
+                        else if (num <= cat * 5) { document.getElementById("prize").value="免分期"; document.getElementById("luckydraw").submit();}
+                        else if (num <= cat * 6) { document.getElementById("prize").value="白条额度"; document.getElementById("luckydraw").submit();}
+                        else if (num <= cat * 7) { document.getElementById("prize").value="未中奖"; document.getElementById("luckydraw").submit();}
                     }, 4000);
                 }
             }, 30);
@@ -77,5 +86,6 @@
 			</td>
 	    </tr>
     </table>
+</form>
 </body>
 </html>
