@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-<form id="luckydraw" method="post" action="result.php">
+<form id="prizewheel" method="post" action="result.php">
     <table width="100%" height="100%">
 		<tr>
             <td align="center">请先填写完抽奖信息后再抽奖！</td>
@@ -71,13 +71,13 @@
                     setTimeout(function () {
                         offOn = !offOn;
                         num = rdm % 360;
-                        if (num <= cat * 1) { document.getElementById("prizetype").value="面单999元"; document.getElementById("luckydraw").submit();}
-                        else if (num <= cat * 2) { document.getElementById("prizetype").value="免单50元"; document.getElementById("luckydraw").submit();}
-                        else if (num <= cat * 3) { document.getElementById("prizetype").value="免单10元"; document.getElementById("luckydraw").submit();}
-                        else if (num <= cat * 4) { document.getElementById("prizetype").value="免单5元"; document.getElementById("luckydraw").submit();}
-                        else if (num <= cat * 5) { document.getElementById("prizetype").value="免分期"; document.getElementById("luckydraw").submit();}
-                        else if (num <= cat * 6) { document.getElementById("prizetype").value="白条额度"; document.getElementById("luckydraw").submit();}
-                        else if (num <= cat * 7) { document.getElementById("prizetype").value="未中奖"; document.getElementById("luckydraw").submit();}
+                        if (num <= cat * 1) { document.getElementById("prizetype").value="面单999元"; document.getElementById("prizewheel").submit();}
+                        else if (num <= cat * 2) { document.getElementById("prizetype").value="免单50元"; document.getElementById("prizewheel").submit();}
+                        else if (num <= cat * 3) { document.getElementById("prizetype").value="免单10元"; document.getElementById("prizewheel").submit();}
+                        else if (num <= cat * 4) { document.getElementById("prizetype").value="免单5元"; document.getElementById("prizewheel").submit();}
+                        else if (num <= cat * 5) { document.getElementById("prizetype").value="免分期"; document.getElementById("prizewheel").submit();}
+                        else if (num <= cat * 6) { document.getElementById("prizetype").value="白条额度"; document.getElementById("prizewheel").submit();}
+                        else if (num <= cat * 7) { document.getElementById("prizetype").value="未中奖"; document.getElementById("prizewheel").submit();}
                     }, 4000);
                 }
             }, 30);
