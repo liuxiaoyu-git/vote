@@ -6,7 +6,7 @@ $dbname = getenv("DATABASE_NAME"); #sampledb
 $dbpwd = getenv("DATABASE_PASSWORD"); #password
 $username = trim($_POST['username']);
 $code = trim($_POST['code']);
-$result = trim($_POST['prizetype']);
+$prizetype = trim($_POST['prizetype']);
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $sql = "insert into PrizeWheel values('".$username."-".$code."','".$prizetype."')";
 
