@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-<form id="luckydraw" type="post" action="reslut.php">
+<form id="luckydraw" type="post" action="result.php">
     <table width="100%" height="100%">
 		<tr>
             <td align="center">请先填写完抽奖信息后再抽奖！</td>
