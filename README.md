@@ -3,6 +3,7 @@
 1)oc new-project prize-wheel
 
 2)部署一个mysql 
+
 oc new-app mysql-ephemeral --name mysql -p MYSQL_USER=openshift -p MYSQL_PASSWORD=password -p MYSQL_ROOT_PASSWORD=password -p MYSQL_DATABASE=sampledb
 
 3)创建表
