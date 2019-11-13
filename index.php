@@ -1,4 +1,4 @@
-<html>
+<ht<html>
 <head>
     <title>转盘抽奖</title>
     <!-- 这里是css部分 -->
@@ -29,17 +29,17 @@
 <form id="prizewheel" method="post" action="result.php">
     <table width="100%" height="100%">
 		<tr>
-            <td align="center">请先填写完抽奖信息后再抽奖！</td>
+            <td align="center">请先填写完抽奖信息后再抽奖！抽奖即可。</td>
 	    </tr>		<tr>
-            <td align="center">姓名：<input name="username" type="text"><input type="hidden" id="prizetype" name="prizetype" value="-----" /></td>
+            <td align="center">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input name="username" type="text"><input type="hidden" id="prizetype" name="prizetype" value="-----" /></td>
 	    </tr>
 		<tr>
             <td align="center">手机4位：<input name="code" type="text"/></td>
-	    </tr>       
+	    </tr>
 		<tr>
 			<td align="center">
-	<!-- 这里是HTML结构部分 --> 
-    <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
+	<!-- 这里是HTML结构部分 -->
+    <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>
     <!-- 这里是js部分 -->
     <script>
         var oPointer = document.getElementsByTagName("img")[0];
@@ -81,9 +81,6 @@
     </script>
 			</td>
 	    </tr>
-	    <tr>
-            <td align="center"><input type="submit" value="保存"/></td>
-	    </tr> 
     </table>
 </form>
 </body>
