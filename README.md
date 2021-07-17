@@ -15,12 +15,19 @@ mysql -h127.0.0.1 -P3306 -uopenshift -ppassword
 use demodb;
 
 drop table vote;
+
 create table vote (vote_item varchar(20));
+
 insert into vote values('red');
+
 insert into vote values('red');
+
 insert into vote values('red');
+
 insert into vote values('green');
+
 insert into vote values('green');
+
 select vote_item, count(vote_item) from vote group by vote_item;
 
 4)创建应用和相关route 
