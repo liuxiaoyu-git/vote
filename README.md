@@ -4,7 +4,9 @@
 
 2)部署一个mysql 
 
-`oc new-app mysql-persistent --name mysql -p MYSQL_USER=openshift -p MYSQL_PASSWORD=password -p MYSQL_ROOT_PASSWORD=password -p MYSQL_DATABASE=demodb`
+```
+oc new-app mysql-persistent --name mysql -p MYSQL_USER=openshift -p MYSQL_PASSWORD=password -p MYSQL_ROOT_PASSWORD=password -p MYSQL_DATABASE=demodb
+```
 
 3)创建表
 
