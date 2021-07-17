@@ -17,7 +17,6 @@ use demodb;
 drop table vote;
 
 create table vote (vote_item varchar(20));
-
 insert into vote values('red');
 
 insert into vote values('red');
