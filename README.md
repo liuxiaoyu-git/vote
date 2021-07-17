@@ -16,7 +16,6 @@ mysql -h127.0.0.1 -P3306 -uopenshift -ppassword
 use demodb;
 
 drop table vote;
-
 create table vote (vote_item varchar(20));
 
 insert into vote values('red');
