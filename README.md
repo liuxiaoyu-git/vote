@@ -1,6 +1,10 @@
 # Vote
 
-1)oc new-project vote
+1)创建项目
+
+```
+oc new-project vote
+```
 
 2)部署一个mysql 
 
