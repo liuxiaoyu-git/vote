@@ -8,6 +8,7 @@ oc new-app mysql-persistent --name mysql -p MYSQL_USER=openshift -p MYSQL_PASSWO
 
 3)创建表
 
+```
 oc rsh $(oc get pods --output=jsonpath={.items[0].metadata.name} --field-selector status.phase=Running)
 
 mysql -h127.0.0.1 -P3306 -uopenshift -ppassword
@@ -17,6 +18,7 @@ use demodb;
 drop table vote;
 
 create table vote (vote_item varchar(20));
+
 insert into vote values('red');
 
 insert into vote values('red');
@@ -28,6 +30,7 @@ insert into vote values('green');
 insert into vote values('green');
 
 select vote_item, count(vote_item) from vote group by vote_item;
+```
 
 4)创建应用和相关route 
 
