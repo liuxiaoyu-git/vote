@@ -11,14 +11,15 @@ $sql = "select vote_item, count(vote_item) vote_count from vote group by vote_it
 
         $res=$connection->query($sql);
         $rows=$res->num_rows;//获取行数
-        
         echo "<table><tr>";
         echo "<th>Vote Item</th><th>Vote Count</th>";
         echo "</tr>";
-        while($row = $sql->fetch_assoc()){
-            echo "<tr>";
-            echo "<td>$row['vote_item']</td><td>$row['vote_count']</td>";
-            echo "</tr>";
+        if($rows){
+          while($row = $sql->fetch_assoc()){
+              echo "<tr>";
+              echo $row['vote_item'];
+              echo "</tr>";
+          }
         }
         echo "</table>";
 
