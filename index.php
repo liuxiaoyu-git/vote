@@ -17,7 +17,7 @@
 	<form name="vote" method="post" action="vote.php">
 	<table>
 		<tr>
-			<td colspan="2" align="left" height="100" valign="top"><img src="banner.png" width="350"></td>
+			<td colspan="2" align="center" height="100" valign="top"><img src="banner.png" width="350"></td>
 		</tr>
 		<tr>
 			<td colspan="2" height="50" valign="top" class="style1">选出一项你希望新版本更新的内容：</td>
