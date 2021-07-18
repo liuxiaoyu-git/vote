@@ -30,7 +30,7 @@
 				  <option value="游戏宝藏">只更新游戏宝藏</option>
 				</select>
 			</td>
-			<td><input type="submit" value="投票"></td>
+			<td><input type="submit" value="投票"  style="font-size:22px;"></td>
 		</tr>	
 	</table>
 	</form>
