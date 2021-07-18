@@ -1,27 +1,28 @@
 <?php
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("DATABASE_USER"); #openshift
-$dbname = getenv("DATABASE_NAME"); #demodb
-$dbpwd = getenv("DATABASE_PASSWORD"); #password
-
+$dbuser = getenv("DATABASE_USER");
+$dbname = getenv("DATABASE_NAME");
+$dbpwd = getenv("DATABASE_PASSWORD");
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $sql = "select vote_item, count(vote_item) vote_count from vote group by vote_item";
-
-
-        $res=$connection->query($sql);
-        $rows=$res->num_rows;//获取行数
-        echo "<table><tr>";
-        echo "<th>Vote Item</th><th>Vote Count</th>";
-        echo "</tr>";
-        if($rows){
-          while($row = $sql->fetch_assoc()){
-              echo "<tr>";
-              echo $row['vote_item'];
-              echo "</tr>";
-          }
-        }
-        echo "</table>";
-
-mysqli_close($connection);
+$rs = $connection->query($sql);
 ?>
+<html>
+<div id="box">
+    <table width="100%" height="100%">
+        <tr>
+            <td align="center">
+                <font size="26" color="#FF0000">
+                    <?php
+                    while ($row = mysqli_fetch_assoc($rs)) {
+                        echo "更新内容: ". $row['vote_item']. "  投票总数量: ". $row['vote_count']. "<br>";
+                    }
+                    mysqli_close($connection);
+                    ?>
+                </font>
+            </td>
+        </tr>
+    </table>
+</div>
+</html>
