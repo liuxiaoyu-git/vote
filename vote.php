@@ -1,9 +1,16 @@
 <?php
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("MYSQL_USER"); #openshift
-$dbname = getenv("MYSQL_DATABASE"); #sampledb
-$dbpwd = getenv("MYSQL_PASSWORD"); #password
+$dbuser = getenv("DATABASE_USER"); #openshift
+$dbname = getenv("DATABASE_NAME"); #demodb
+$dbpwd = getenv("DATABASE_PASSWORD"); #password
+
+echo "dbhost".$dbhost;
+echo "dbport".$dbport;
+echo "dbuser".$dbuser;
+echo "dbname".$dbname;
+echo "dbpwd".$dbpwd;
+
 
 $vote = trim($_POST['vote']);
 $sql = "insert into vote values('".$vote."')";
