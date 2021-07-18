@@ -1,9 +1,9 @@
 <?php
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("MYSQL_USER"); #openshift
-$dbname = getenv("MYSQL_DATABASE"); #sampledb
-$dbpwd = getenv("MYSQL_PASSWORD"); #password
+$dbuser = getenv("DATABASE_USER"); #openshift
+$dbname = getenv("DATABASE_NAME"); #demodb
+$dbpwd = getenv("DATABASE_PASSWORD"); #password
 
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $sql = "select vote_item, count(vote_item) vote_count from vote group by vote_item";
