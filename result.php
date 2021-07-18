@@ -10,19 +10,17 @@ $rs = $connection->query($sql);
 ?>
 <html>
 <div id="box">
-    <table width="100%" height="100%">
-        <tr>
-            <td align="center">
-                <font size="26" color="#FF0000">
-                    <?php
-                    while ($row = mysqli_fetch_assoc($rs)) {
-                        echo "更新内容: ". $row['vote_item']. "  投票总数量: ". $row['vote_count']. "<br>";
-                    }
-                    mysqli_close($connection);
-                    ?>
-                </font>
-            </td>
-        </tr>
-    </table>
+  <table width="100%" height="100%">
+    <tr>
+      <td align="center"><font size="26" color="#FF0000">投票更新内容</font></td><td align="center"><font size="26" color="#FF0000">投票总数量</font></td>
+    </tr>
+    <?php
+    while ($row = mysqli_fetch_assoc($rs)) {
+      echo "<tr><td align=center><font size=26>".$row['vote_item']."</font></td>";
+      echo "<td align=center><font size=26>".$row['vote_count']."</font></td></tr>";
+    }
+    mysqli_close($connection);
+    ?>
+  </table>
 </div>
 </html>
