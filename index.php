@@ -5,7 +5,7 @@
 <style type="text/css">
 #main{width:100%;min-height:100%;height:100%;overflow:hidden !important;overflow: visible;}
 .style1 {
-	font-size: large;
+	font-size: 24px;;
 	color: #FF0000;
 }
 </style>
@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<td>
-				<select name="vote">
+				<select name="vote" style="font-size:24px;">
 				  <option value="全部更新">更新和游戏背景和游戏宝藏</option>
 				  <option value="游戏宝藏">只更新游戏背景</option>
 				  <option value="游戏宝藏">只更新游戏宝藏</option>
