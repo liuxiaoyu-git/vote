@@ -9,15 +9,11 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 $sql = "select vote_item, count(vote_item) vote_count from vote group by vote_item";
 
 
-        $res=mysql_query($sql,$connection);
-        $rows=mysql_affected_rows($connection);//获取行数
-        $colums=mysql_num_fields($res);//获取列数
+        $res=$connection->query($sql);
+        $rows=$res->num_rows;//获取行数
         
         echo "<table><tr>";
-        for($i=0; $i < $colums; $i++){
-            $field_name=mysql_field_name($res,$i);
-            echo "<th>$field_name</th>";
-        }
+        echo "<th>Vote Item</th><th>Vote Count</th>";
         echo "</tr>";
         while($row=mysql_fetch_row($res)){
             echo "<tr>";
