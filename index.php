@@ -14,7 +14,7 @@
 <table id="main">
 	<tr>
 	<td align="center">
-	<form name="vote" method="post" action="result.php">
+	<form name="vote" method="post" action="vote.php">
 	<table>
 		<tr>
 			<td colspan="2" align="left" height="100" valign="top"><img src="banner.png" width="350"></td>
@@ -27,7 +27,7 @@
 				<select name="vote">
 				  <option value="all">更新和游戏背景和游戏宝藏</option>
 				  <option value="background">只更新游戏背景</option>
-				  <option value="target">只更新游戏宝藏</option>
+				  <option value="treasure">只更新游戏宝藏</option>
 				</select>
 			</td>
 			<td><input type="submit" value="投票"></td>
