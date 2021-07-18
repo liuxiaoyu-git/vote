@@ -25,9 +25,9 @@
 		<tr>
 			<td>
 				<select name="vote">
-				  <option value="all">更新和游戏背景和游戏宝藏</option>
-				  <option value="background">只更新游戏背景</option>
-				  <option value="treasure">只更新游戏宝藏</option>
+				  <option value="全部更新">更新和游戏背景和游戏宝藏</option>
+				  <option value="游戏宝藏">只更新游戏背景</option>
+				  <option value="游戏宝藏">只更新游戏宝藏</option>
 				</select>
 			</td>
 			<td><input type="submit" value="投票"></td>
