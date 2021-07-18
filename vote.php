@@ -19,7 +19,10 @@ echo "<br>sql:".$sql;
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $connection->query($sql);
 
-echo "<br>投票结果：".$vote;
+echo "<br>你的投票是：".$vote;
 
 mysqli_close($connection);
+
+header('location:result.php');
+
 ?>
