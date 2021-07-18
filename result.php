@@ -15,11 +15,9 @@ $sql = "select vote_item, count(vote_item) vote_count from vote group by vote_it
         echo "<table><tr>";
         echo "<th>Vote Item</th><th>Vote Count</th>";
         echo "</tr>";
-        while($row=mysql_fetch_row($res)){
+        while($row = $sql->fetch_assoc()){
             echo "<tr>";
-            for($i=0; $i<$colums; $i++){
-                echo "<td>$row[$i]</td>";
-            }
+            echo "<td>$row['vote_item']</td><td>$row['vote_count']</td>";
             echo "</tr>";
         }
         echo "</table>";
