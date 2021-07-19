@@ -36,3 +36,5 @@ oc new-app https://github.com/liuxiaoyu-git/vote --name=vote --env MYSQL_SERVICE
 oc expose svc vote
 ```
 
+
+其他见https://github.com/liuxiaoyu-git/Gold-Miner-Game/blob/master/README.md
