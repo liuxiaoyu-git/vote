@@ -26,7 +26,7 @@
 			<td>
 				<select name="vote" style="font-size:24px;">
 				  <option value="全部更新">更新和游戏背景和游戏宝藏</option>
-				  <option value="游戏宝藏">只更新游戏背景</option>
+				  <option value="游戏背景">只更新游戏背景</option>
 				  <option value="游戏宝藏">只更新游戏宝藏</option>
 				</select>
 			</td>
